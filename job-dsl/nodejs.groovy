@@ -1,6 +1,6 @@
 job('nestjs dsl-job'){
     scm{
-        git('git@github.com:MAbdulWasey/testingjenkins.git'){ node -> //is hudson.plugins.git.GitSCM
+        git('https://github.com/MAbdulWasey/testingjenkins.git'){ node -> //is hudson.plugins.git.GitSCM
         
         node / gitConfigName('DSL User')
         node / gitConfigEmail('awasey12@gmail.com')
