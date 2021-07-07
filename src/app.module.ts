@@ -9,15 +9,15 @@ import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
-    // ConfigModule.forRoot({isGlobal:true}),
-    // TypeOrmModule.forRoot({
-    //   type: 'postgres',
-    //   url: process.env.DATABASE_URL,
-    //   autoLoadEntities: true,
-    //   synchronize:true,
-    // }),
-    // UserapiModule,
-    // TasksModule
+    ConfigModule.forRoot({isGlobal:true}),
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      url: process.env.DATABASE_URL,
+      autoLoadEntities: true,
+      synchronize:true,
+    }),
+    UserapiModule,
+    TasksModule
   ],
   controllers: [AppController, CatsController],
   providers: [AppService],
