@@ -13,7 +13,7 @@ node{
     }
     stage('docker build/push'){
         docker.withRegistry('http://registry.digitalocean.com', 'digitaldock'){
-            def app = docker.build("firstnestjsdocker/firstnestjsdocker:${commit_id}", '.').push()
+            def app = docker.build("firstnestjsdocker:${commit_id}", '.').push()
         }
     }
 }
